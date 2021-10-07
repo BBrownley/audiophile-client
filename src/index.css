@@ -1,0 +1,215 @@
+.App {
+  overflow: hidden;
+  position: relative;
+  padding-top: 5.5rem;
+  background: #fafafa;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 3.625rem;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 2.75rem;
+  letter-spacing: 1.5px;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.25rem;
+  letter-spacing: 1.15px;
+}
+
+h4 {
+  font-size: 1.75rem;
+  line-height: 2.375rem;
+  letter-spacing: 2px;
+}
+
+h5 {
+  font-size: 1.5rem;
+  line-height: 2.0625rem;
+  letter-spacing: 1.7px;
+}
+
+h6 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  letter-spacing: 1.3px;
+}
+
+.subtitle {
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
+  letter-spacing: 1px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+}
+
+button {
+  width: 10rem;
+  height: 3rem;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  font-weight: bold;
+  font-family: inherit;
+  letter-spacing: 1px;
+  background-color: #d87d4a;
+  color: white;
+  border: none;
+  transition: 0.25s ease background-color;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #fbaf85;
+}
+
+button[class="secondary"] {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  transition: 0.25s ease all;
+}
+
+button[class="secondary"]:hover {
+  background-color: black;
+  color: white;
+}
+
+button[class="tertiary"] {
+  width: 3.625rem;
+  height: 1.125rem;
+  background-color: transparent;
+  color: #808080;
+  transition: 0.125s ease color;
+  position: relative;
+  margin-left: -0.75rem;
+}
+
+button[class="tertiary"]:hover {
+  color: #d87d4a;
+}
+
+button[class="tertiary"]:after {
+  position: absolute;
+  right: -0.75rem;
+  top: 0.25rem;
+  background-image: url("./assets/shared/desktop/icon-arrow-right.svg");
+  height: 12px;
+  width: 8px;
+  display: block;
+  content: " ";
+}
+
+/* Form elements
+
+<div className="form-field text-field">
+  <label for="fname">Name</label>
+  <input type="text" id="fname" name="fname" />
+</div>
+<div className="form-field radio-field">
+  <label for="emoney">e-Money</label>
+  <input type="radio" id="emoney" name="emoney" />
+</div>
+
+*/
+
+.form-field {
+  display: inline-block;
+}
+
+.form-field,
+.form-field div input,
+.form-field label {
+  font-family: inherit;
+}
+
+.text-field > *,
+.text-field div input {
+  display: block;
+  font-weight: bold;
+}
+
+.text-field label {
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.text-field div input,
+.form-field.radio-field {
+  width: 19.3125rem;
+  height: 3.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cfcfcf;
+  padding: 1.5625rem;
+  caret-color: #d87d4a;
+  letter-spacing: -0.25px;
+}
+
+.text-field input:active,
+.text-field input:focus {
+  outline: none;
+  border-color: #d87d4a;
+}
+
+.text-field.warning div input {
+  border: 2px solid #cd2c2c;
+}
+
+.text-field.warning label {
+  color: #cd2c2c;
+}
+.form-field.warning-format div {
+  position: relative;
+}
+
+.form-field.warning-format div:after {
+  position: absolute;
+  content: "Wrong format";
+  top: -1.5rem;
+  right: 0;
+  font-size: 0.75rem;
+  color: #cd2c2c;
+}
+
+.form-field.radio-field {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.form-field.radio-field input {
+  margin-right: 1rem;
+}
+
+.form-field.radio-field:hover {
+  cursor: pointer;
+  border-color: #d87d4a;
+}
