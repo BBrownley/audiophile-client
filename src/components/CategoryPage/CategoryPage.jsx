@@ -29,14 +29,9 @@ export default function CategoryPage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    function timeout(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
     const updateItems = async category => {
       setItems([]);
       setLoading(true);
-      await timeout(1000);
       const items = await apiService.getAllFromCategory(category);
       setLoading(false);
       setItems(items);
