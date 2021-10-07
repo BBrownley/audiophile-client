@@ -1,6 +1,10 @@
 import axios from "axios";
 
-const baseUrl = "http://localhost:1337";
+const production = true;
+
+const baseUrl = production
+  ? "https://audiophile-backend.herokuapp.com/"
+  : "http://localhost:1337";
 
 // Get all items belonging to a category
 const getAllFromCategory = async category => {
