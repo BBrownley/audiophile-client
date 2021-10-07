@@ -7,8 +7,6 @@ import check from "../../assets/checkmark.png";
 import { Container, Main, Summary } from "./CheckoutModal.elements";
 import { Item } from "../CheckoutSummary/CheckoutSummary.elements";
 
-const baseUrl = "https://audiophile-backend.herokuapp.com";
-
 export default function CheckoutModal({
   formData,
   items,
@@ -43,7 +41,7 @@ export default function CheckoutModal({
                   <Item>
                     <div className="item-detail-primary">
                       <img
-                        src={`${baseUrl}${cartItem.image.url}`}
+                        src={`${cartItem.image.url}`}
                         alt={`${cartItem.name}`}
                       />
                       <div>
@@ -73,7 +71,7 @@ export default function CheckoutModal({
               <Item>
                 <div className="item-detail-primary">
                   <img
-                    src={`${baseUrl}${cartItems[0].image.url}`}
+                    src={`${cartItems[0].image.url}`}
                     alt={`${cartItems[0].name}`}
                   />
                   <div>

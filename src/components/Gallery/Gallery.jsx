@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { Container, Image1, Image2, ImageMain } from "./Gallery.elements";
 
-const baseUrl = "https://audiophile-backend.herokuapp.com";
-
 /*
 
 This is a child component of SingleItemPage displaying a gallery of images
@@ -81,26 +79,26 @@ export default function Gallery(props) {
         <div className="side-image-wrapper">
           <Image1
             className="image-1 side-images__img gallery-img"
-            desktopImg={`${baseUrl}${images.img1.desktopUrl}`}
-            tabletImg={`${baseUrl}${images.img1.tabletUrl}`}
-            mobileImg={`${baseUrl}${images.img1.mobileUrl}`}
+            desktopImg={`${images.img1.desktopUrl}`}
+            tabletImg={`${images.img1.tabletUrl}`}
+            mobileImg={`${images.img1.mobileUrl}`}
           ></Image1>
         </div>
         <div className="side-image-wrapper">
           <Image2
             className="image-2 side-images__img gallery-img"
-            desktopImg={`${baseUrl}${images.img2.desktopUrl}`}
-            tabletImg={`${baseUrl}${images.img2.tabletUrl}`}
-            mobileImg={`${baseUrl}${images.img2.mobileUrl}`}
+            desktopImg={`${images.img2.desktopUrl}`}
+            tabletImg={`${images.img2.tabletUrl}`}
+            mobileImg={`${images.img2.mobileUrl}`}
           ></Image2>
         </div>
       </div>
       <div className="main-image-wrapper">
         <ImageMain
           className="gallery-img"
-          desktopImg={`${baseUrl}${images.imgMain.desktopUrl}`}
-          tabletImg={`${baseUrl}${images.imgMain.tabletUrl}`}
-          mobileImg={`${baseUrl}${images.imgMain.mobileUrl}`}
+          desktopImg={`${images.imgMain.desktopUrl}`}
+          tabletImg={`${images.imgMain.tabletUrl}`}
+          mobileImg={`${images.imgMain.mobileUrl}`}
         ></ImageMain>
       </div>
     </Container>

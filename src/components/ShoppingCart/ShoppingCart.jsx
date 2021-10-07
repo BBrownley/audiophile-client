@@ -12,8 +12,6 @@ import {
   StyledCheckoutBtn
 } from "./ShoppingCart.elements";
 
-const baseUrl = "https://audiophile-backend.herokuapp.com";
-
 export default function ShoppingCart({
   toggleCartOpen,
   cartOpen,
@@ -84,7 +82,7 @@ export default function ShoppingCart({
                 return (
                   <Item key={index}>
                     <div className="item-main">
-                      <img src={`${baseUrl}${item.image.url}`} />
+                      <img src={`${item.image.url}`} />
                       <div>
                         <StyledCartItemLink
                           to={`/item/${item.id}`}

@@ -6,8 +6,6 @@ import apiService from "../../apiService";
 
 import { Container, Items, Item } from "./SuggestedItems.elements";
 
-const baseUrl = "https://audiophile-backend.herokuapp.com";
-
 /*
 
 - Gets current category of the item the parent (SingleItemPage) belongs to and curr item ID
@@ -42,7 +40,7 @@ export default function SuggestedItems(props) {
         {suggested.map((item, index) => {
           return (
             <Item key={index}>
-              <img src={`${baseUrl}${item.image[0].url}`} />
+              <img src={`${item.image[0].url}`} />
               <h5>
                 {
                   item.name

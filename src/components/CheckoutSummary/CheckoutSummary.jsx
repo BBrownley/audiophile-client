@@ -3,8 +3,6 @@ import { useCart } from "../../CartContext";
 
 import { Container, ItemList, Item } from "./CheckoutSummary.elements";
 
-const baseUrl = "https://audiophile-backend.herokuapp.com";
-
 export default function CheckoutSummary({ submitForm }) {
   const cartItems = useCart();
   const shippingCost = 50;
@@ -50,7 +48,7 @@ export default function CheckoutSummary({ submitForm }) {
             <Item key={index}>
               <div className="item-detail-primary">
                 <img
-                  src={`${baseUrl}${cartItem.image.url}`}
+                  src={`${cartItem.image.url}`}
                   alt={`${cartItem.name}`}
                 />
                 <div>

@@ -1,7 +1,5 @@
 import styled, { css } from "styled-components";
 
-const baseUrl = "https://audiophile-backend.herokuapp.com";
-
 export const Container = styled.div`
   /* border: 2px dashed; */
   flex-direction: ${props => (props.index % 2 === 0 ? "row" : "row-reverse")};
@@ -31,7 +29,7 @@ export const ImageWrapper = styled.div`
 `;
 
 export const ItemImage = styled.div`
-  background: url(${props => `${baseUrl}${props.desktopImgUrl}`});
+  background: url(${props => `${props.desktopImgUrl}`});
   padding-bottom: 40%;
   background-position: center;
   background-size: cover;
@@ -42,7 +40,7 @@ export const ItemImage = styled.div`
   bottom: 0;
 
   @media (max-width: 850px) {
-    background: url(${props => `${baseUrl}${props.tabletImgUrl}`});
+    background: url(${props => `${props.tabletImgUrl}`});
     background-size: cover;
     background-position: center;
   }

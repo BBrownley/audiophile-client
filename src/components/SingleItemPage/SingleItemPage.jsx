@@ -26,7 +26,6 @@ import Gallery from "../Gallery/Gallery";
 import Skeleton from "react-loading-skeleton";
 import SuggestedItems from "../SuggestedItems/SuggestedItems";
 
-const baseUrl = "https://audiophile-backend.herokuapp.com";
 
 const defaultItemState = {
   name: null,
@@ -128,11 +127,11 @@ export default function SingleItemPage() {
         <ProductImg
           src={(() => {
             if (width > 1100) {
-              return `${baseUrl}${desktopImgUrl}`;
+              return `${desktopImgUrl}`;
             } else if (width > 725) {
-              return `${baseUrl}${tabletImgUrl}`;
+              return `${tabletImgUrl}`;
             } else {
-              return `${baseUrl}${mobileImgUrl}`;
+              return `${mobileImgUrl}`;
             }
           })()}
           alt={item.name}
