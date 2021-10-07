@@ -3,7 +3,7 @@ import axios from "axios";
 const production = true;
 
 const baseUrl = production
-  ? "https://audiophile-backend.herokuapp.com/"
+  ? "https://audiophile-backend.herokuapp.com"
   : "http://localhost:1337";
 
 // Get all items belonging to a category
