@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Image1, Image2, ImageMain } from "./Gallery.elements";
 
-const baseUrl = process.env.BASE_URL || "http://localhost:1337";
+const baseUrl = "https://audiophile-backend.herokuapp.com";
 
 /*
 

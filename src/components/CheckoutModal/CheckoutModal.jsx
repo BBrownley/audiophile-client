@@ -7,7 +7,7 @@ import check from "../../assets/checkmark.png";
 import { Container, Main, Summary } from "./CheckoutModal.elements";
 import { Item } from "../CheckoutSummary/CheckoutSummary.elements";
 
-const baseUrl = process.env.BASE_URL || "http://localhost:1337";
+const baseUrl = "https://audiophile-backend.herokuapp.com";
 
 export default function CheckoutModal({
   formData,

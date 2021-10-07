@@ -26,7 +26,7 @@ import Gallery from "../Gallery/Gallery";
 import Skeleton from "react-loading-skeleton";
 import SuggestedItems from "../SuggestedItems/SuggestedItems";
 
-const baseUrl = process.env.BASE_URL || "http://localhost:1337";
+const baseUrl = "https://audiophile-backend.herokuapp.com";
 
 const defaultItemState = {
   name: null,

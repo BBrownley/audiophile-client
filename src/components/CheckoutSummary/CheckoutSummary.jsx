@@ -3,7 +3,7 @@ import { useCart } from "../../CartContext";
 
 import { Container, ItemList, Item } from "./CheckoutSummary.elements";
 
-const baseUrl = process.env.BASE_URL || "http://localhost:1337";
+const baseUrl = "https://audiophile-backend.herokuapp.com";
 
 export default function CheckoutSummary({ submitForm }) {
   const cartItems = useCart();

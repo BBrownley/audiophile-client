@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-const baseUrl = process.env.BASE_URL || "http://localhost:1337";
+const baseUrl = "https://audiophile-backend.herokuapp.com";
 
 export const Container = styled.div`
   /* border: 2px dashed; */
