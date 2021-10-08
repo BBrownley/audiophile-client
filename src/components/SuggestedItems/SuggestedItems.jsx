@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useWindowDimension } from "../../hooks/useWindowDimension";
 
 import apiService from "../../apiService";
+import parseImgFileName from "../../imgFileNameParser";
+import useScreenWidth from "../../hooks/useScreenWidth";
 
 import { Container, Items, Item } from "./SuggestedItems.elements";
 
@@ -22,6 +24,8 @@ export default function SuggestedItems(props) {
   const [itemId, setItemId] = useState(props.itemId);
   const [suggested, setSuggested] = useState([]);
 
+  const width = useScreenWidth();
+
   useEffect(() => {
     setCategoryName(props.category.name);
     setItemId(props.itemId);
@@ -38,9 +42,18 @@ export default function SuggestedItems(props) {
       <h3>You may also like</h3>
       <Items>
         {suggested.map((item, index) => {
+          const itemImages = item.image;
+
+          const {
+            mobileImgUrl,
+            tabletImgUrl,
+            desktopImgUrl
+          } = parseImgFileName(itemImages);
+
           return (
             <Item key={index}>
-              <img src={`${item.image[0].url}`} />
+              {width > 725 && <img src={desktopImgUrl} />}
+              {width <= 725 && <img src={mobileImgUrl} />}
               <h5>
                 {
                   item.name
