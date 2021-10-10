@@ -42,7 +42,7 @@ function App() {
   const initializeCart = useCartUpdate();
   const [pingingServer, setPingingServer] = useState(true);
 
-  // Sends a GET request to the heroku server so it wakes up on user visit if asleep
+  // ping heroku server so it wakes up on user visit if asleep
   const pingServer = async () => {
     await axios.get("https://audiophile-backend.herokuapp.com/");
     setPingingServer(false);
