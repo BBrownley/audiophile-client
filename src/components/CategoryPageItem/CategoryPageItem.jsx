@@ -10,6 +10,8 @@ import {
   ItemDetails
 } from "./CategoryPageItem.elements";
 
+import apiService from "../../apiService";
+
 export default function CategoryPageItem({ item, index }) {
   const itemImages = item.image;
 
@@ -21,9 +23,9 @@ export default function CategoryPageItem({ item, index }) {
     <Container index={index}>
       <ImageWrapper>
         <ItemImage
-          mobileImgUrl={mobileImgUrl}
-          tabletImgUrl={tabletImgUrl}
-          desktopImgUrl={desktopImgUrl}
+          mobileImgUrl={`${apiService.baseUrl}${mobileImgUrl}`}
+          tabletImgUrl={`${apiService.baseUrl}${tabletImgUrl}`}
+          desktopImgUrl={`${apiService.baseUrl}${desktopImgUrl}`}
         ></ItemImage>
       </ImageWrapper>
 

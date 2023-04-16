@@ -42,9 +42,9 @@ function App() {
   const initializeCart = useCartUpdate();
   const [pingingServer, setPingingServer] = useState(true);
 
-  // ping heroku server so it wakes up on user visit if asleep
+  // ping server so it wakes up on user visit if asleep
   const pingServer = async () => {
-    await axios.get("https://audiophile-backend.herokuapp.com/");
+    await axios.get("http://localhost:1337");
     setPingingServer(false);
   };
 
@@ -73,7 +73,7 @@ function App() {
 
             <PingNotice>
               <ScaleLoader />{" "}
-              <span className="ping-msg">Pinging Heroku server...</span>
+              <span className="ping-msg">Pinging server...</span>
             </PingNotice>
           )}
         </ThemeProvider>

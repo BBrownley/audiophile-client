@@ -12,6 +12,8 @@ import {
   StyledCheckoutBtn
 } from "./ShoppingCart.elements";
 
+import apiService from "../../apiService";
+
 export default function ShoppingCart({
   toggleCartOpen,
   cartOpen,
@@ -82,7 +84,7 @@ export default function ShoppingCart({
                 return (
                   <Item key={index}>
                     <div className="item-main">
-                      <img src={`${item.image.url}`} />
+                      <img src={`${apiService.baseUrl}${item.image.url}`} />
                       <div>
                         <StyledCartItemLink
                           to={`/item/${item.id}`}

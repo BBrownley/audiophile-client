@@ -33,6 +33,7 @@ export default function CategoryPage() {
       setItems([]);
       setLoading(true);
       const items = await apiService.getAllFromCategory(category);
+      console.log(items);
       setLoading(false);
       setItems(items);
     };

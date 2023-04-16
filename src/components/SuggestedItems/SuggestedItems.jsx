@@ -52,8 +52,12 @@ export default function SuggestedItems(props) {
 
           return (
             <Item key={index}>
-              {width > 725 && <img src={desktopImgUrl} />}
-              {width <= 725 && <img src={mobileImgUrl} />}
+              {width > 725 && (
+                <img src={`${apiService.baseUrl}${desktopImgUrl}`} />
+              )}
+              {width <= 725 && (
+                <img src={`${apiService.baseUrl}${mobileImgUrl}`} />
+              )}
               <h5>
                 {
                   item.name

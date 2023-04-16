@@ -2,9 +2,7 @@ import axios from "axios";
 
 const production = true;
 
-const baseUrl = production
-  ? "https://audiophile-backend.herokuapp.com"
-  : "http://localhost:1337";
+const baseUrl = "http://localhost:1337";
 
 // Get all items belonging to a category
 const getAllFromCategory = async category => {
@@ -41,7 +39,8 @@ const getSuggestedItems = async (category, currentItemId) => {
 const apiService = {
   getAllFromCategory,
   getItemById,
-  getSuggestedItems
+  getSuggestedItems,
+  baseUrl
 };
 
 export default apiService;
