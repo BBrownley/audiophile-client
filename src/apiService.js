@@ -1,8 +1,12 @@
 import axios from "axios";
 
+require("dotenv").config();
+
 const production = true;
 
-const baseUrl = "http://localhost:1337";
+// const baseUrl = "http://localhost:1337"; // local backend
+
+const baseUrl = process.env.REACT_APP_BACKEND_URL;
 
 // Get all items belonging to a category
 const getAllFromCategory = async category => {

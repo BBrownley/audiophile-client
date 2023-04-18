@@ -7,6 +7,8 @@ import check from "../../assets/checkmark.png";
 import { Container, Main, Summary } from "./CheckoutModal.elements";
 import { Item } from "../CheckoutSummary/CheckoutSummary.elements";
 
+import apiService from "../../apiService";
+
 export default function CheckoutModal({
   formData,
   items,
@@ -41,7 +43,7 @@ export default function CheckoutModal({
                   <Item>
                     <div className="item-detail-primary">
                       <img
-                        src={`${cartItem.image.url}`}
+                        src={`${apiService.baseUrl}${cartItem.image.url}`}
                         alt={`${cartItem.name}`}
                       />
                       <div>
@@ -71,7 +73,7 @@ export default function CheckoutModal({
               <Item>
                 <div className="item-detail-primary">
                   <img
-                    src={`${cartItems[0].image.url}`}
+                    src={`${apiService.baseUrl}${cartItems[0].image.url}`}
                     alt={`${cartItems[0].name}`}
                   />
                   <div>

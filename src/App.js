@@ -15,6 +15,8 @@ import Footer from "./components/Footer/Footer";
 
 import ScaleLoader from "react-spinners/ScaleLoader";
 
+import apiService from "./apiService"
+
 const delayVisibility = keyframes`
   0%   {opacity: 0;}
   90%  {opacity: 0;}
@@ -44,7 +46,7 @@ function App() {
 
   // ping server so it wakes up on user visit if asleep
   const pingServer = async () => {
-    await axios.get("http://localhost:1337");
+    await axios.get(apiService.baseUrl);
     setPingingServer(false);
   };
 
