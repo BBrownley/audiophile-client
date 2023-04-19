@@ -4,14 +4,16 @@ require("dotenv").config();
 
 const production = true;
 
-// const baseUrl = "http://localhost:1337"; // local backend
+const baseUrl = "http://localhost:1337"; // local backend
 
-const baseUrl = process.env.REACT_APP_BACKEND_URL;
+//const baseUrl = process.env.REACT_APP_BACKEND_URL;
 
 // Get all items belonging to a category
 const getAllFromCategory = async category => {
   try {
+    console.log(`${baseUrl}/products/category/${category}`);
     const req = await axios.get(`${baseUrl}/products/category/${category}`);
+    console.log(req);
     return req.data;
   } catch (exception) {
     console.error(exception);
